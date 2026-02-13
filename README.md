@@ -34,7 +34,7 @@ Jika ingin menjalankan di komputer sendiri:
 
 1.  **Clone Repository**
     ```bash
-    git clone [https://github.com/username/nik-parser.git](https://github.com/username/nik-parser.git)
+    git clone [https://github.com/01satria/NIK-Parser-API.git](https://github.com/01satria/NIK-Parser-API.git)
     cd nik-parser
     ```
 
@@ -72,3 +72,4 @@ Aplikasi ini hanya membaca struktur nomor NIK berdasarkan algoritma standar kepe
 
 ## 👨‍💻 Author
 Dibuat oleh @01Satria.
+
