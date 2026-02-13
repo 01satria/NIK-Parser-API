@@ -11,11 +11,11 @@ URL_KAB = "https://raw.githubusercontent.com/yusufsyaifudin/wilayah-indonesia/ma
 URL_KEC = "https://raw.githubusercontent.com/yusufsyaifudin/wilayah-indonesia/master/data/list_of_area/districts.json"
 
 # Cache data (load sekali saat app start)
-PROVINSI = {p['kode']: {'nama': p['nama']} for p in requests.get(URL_PROV).json()}
-KABUPATEN = {k['kode']: {'nama': k['nama'], 'kode_provinsi': k['kode_provinsi'],
-                         'jenis': 'Kabupaten' if k['nama'].startswith('KABUPATEN') else 'Kota'}
+PROVINSI = {p['id']: {'nama': p['name']} for p in requests.get(URL_PROV).json()}
+KABUPATEN = {k['id']: {'nama': k['name'], 'kode_provinsi': k['province_id'],
+                       'jenis': 'Kabupaten' if k['name'].startswith('KABUPATEN') else 'Kota'}
              for k in requests.get(URL_KAB).json()}
-KECAMATAN = {str(k['kode']): {'nama': k['nama'], 'kode_kabupaten': k['regency_id']}
+KECAMATAN = {str(k['id']): {'nama': k['name'], 'kode_kabupaten': k['regency_id']}
              for k in requests.get(URL_KEC).json()}
 
 # Data pendukung
