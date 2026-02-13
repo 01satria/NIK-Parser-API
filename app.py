@@ -122,7 +122,7 @@ def parse_nik(nik: str, sekarang: datetime = datetime.now()):
         }
     }
 
-    return {"creator": "FikXzMods", "status": True, "result": result}
+    return {"creator": "SatriaDev", "status": True, "result": result}
 
 @app.route('/parse_nik', methods=['GET'])
 def api_parse_nik():
